@@ -1,28 +1,28 @@
 {
   "personal_info": {
-    "name": "張小明",
-    "birthday": "2002-05-20",
-    "major": "資訊工程學系",
-    "favorite_animal": "水豚",
-    "bio": "熱愛寫程式與學習新技術的大學生，喜歡探索未知領域，相信科技能改變生活。"
+    "name": "呂紹銘",
+    "birthday": "2004-14-01",
+    "major": "資訊工程學系四年級",
+    "favorite_animal": "小熊維尼",
+    "bio": "熱衷於探索尖端 AI 知識，並對城市公車路線與運輸系統充滿熱情，致力於將技術融入日常生活。"
   },
   "style_settings": {
-    "layout_choice": "modern", 
-    "theme_color": "tech_blue", 
-    "is_dark_mode": false
+    "layout_choice": "modern",
+    "theme_color": "ftech_blue",
+    "is_dark_mode": true
   },
   "social_links": {
-    "github": "https://github.com/your-username",
-    "linkedin": "https://linkedin.com/in/your-profile"
+    "github": "https://github.com/pooh0424",
+    "linkedin": ""
   },
   "projects": [
     {
-      "name": "AI 聊天機器人",
-      "description": "使用 OpenAI API 打造的專屬程式學習助理。"
+      "name": "棒球落點預測",
+      "description": "利用深度學習模型分析棒球運動軌跡並精準預測球體落點位置。"
     },
     {
-      "name": "期末專題：智能溫室",
-      "description": "結合 Arduino 與 Node.js 的物聯網溫室監控系統。"
+      "name": "機器人步態控制",
+      "description": "開發基於強化學習的演算法，優化雙足機器人在複雜地形下的行走穩定性。"
     }
   ]
 }
