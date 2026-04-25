@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 導覽列：包含主題切換按鈕 -->
+    <header class="navbar">
+        <div class="logo" id="site-logo">Portfolio</div>
+        <button id="theme-toggle">切換深淺模式 🌓</button>
+    </header>
+
+    <!-- 【前端渲染區塊】這個 main 區塊的樣式與內容將完全被 app.js 根據 JSON 資料改變 -->
+    <main id="main-container" class="layout-classic">
+        
+        <!-- 個人資訊區塊 -->
+        <section class="profile-section">
+            <div class="avatar" id="avatar-placeholder">🌟</div>
+            <h1 id="user-name">載入中...</h1>
+            <h3 id="user-major">--</h3>
+            
+            <div class="info-badges">
+                <span class="badge">🎂 <span id="user-birthday">--</span></span>
+                <span class="badge">🐾 最愛: <span id="user-animal">--</span></span>
+            </div>
+            
+            <p id="user-bio" class="bio">正在從伺服器獲取資料...</p>
+            
+            <div id="social-links" class="social-links">
+                <!-- 社群連結將由 JS 動態產生 -->
+            </div>
+        </section>
+
+        <!-- 專案展示區塊 -->
+        <section class="projects-section">
+            <h2>我的專案</h2>
+            <div id="projects-grid" class="projects-grid">
+                <!-- 專案卡片將由 JS 動態產生 -->
+                <p>載入中...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 引入前端 JavaScript 邏輯 -->
+    <script src="app.js"></script>
+</body>
+</html>

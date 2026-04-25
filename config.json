@@ -1,0 +1,28 @@
+{
+  "personal_info": {
+    "name": "張小明",
+    "birthday": "2002-05-20",
+    "major": "資訊工程學系",
+    "favorite_animal": "水豚",
+    "bio": "熱愛寫程式與學習新技術的大學生，喜歡探索未知領域，相信科技能改變生活。"
+  },
+  "style_settings": {
+    "layout_choice": "modern", 
+    "theme_color": "tech_blue", 
+    "is_dark_mode": false
+  },
+  "social_links": {
+    "github": "https://github.com/your-username",
+    "linkedin": "https://linkedin.com/in/your-profile"
+  },
+  "projects": [
+    {
+      "name": "AI 聊天機器人",
+      "description": "使用 OpenAI API 打造的專屬程式學習助理。"
+    },
+    {
+      "name": "期末專題：智能溫室",
+      "description": "結合 Arduino 與 Node.js 的物聯網溫室監控系統。"
+    }
+  ]
+}

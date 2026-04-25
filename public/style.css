@@ -1,0 +1,121 @@
+/* 全域變數定義：前端會透過 JS 修改這些變數來改變全站外觀 */
+:root {
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --card-bg: #ffffff;
+    --primary-color: #2563eb; /* 預設使用 tech_blue */
+
+    /* 主題色選項 */
+    --color-tech_blue: #2563eb;
+    --color-forest_green: #059669;
+    --color-rose_pink: #e11d48;
+}
+
+/* 深色模式變數覆蓋 */
+[data-theme="dark"] {
+    --bg-color: #111827;
+    --text-color: #f3f4f6;
+    --card-bg: #1f2937;
+}
+
+/* 基礎設定 */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 導覽列 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: var(--card-bg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+#theme-toggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================== 排版系統 (Layouts) ================== */
+#main-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    display: gap;
+}
+
+/* 1. 經典模式 (上下排列置左) */
+.layout-classic { display: block; }
+.layout-classic .profile-section { text-align: left; margin-bottom: 3rem; }
+
+/* 2. 現代模式 (左右兩欄) */
+.layout-modern { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; }
+@media (max-width: 768px) { .layout-modern { grid-template-columns: 1fr; } }
+
+/* 3. 卡片模式 (置中滿版卡片) */
+.layout-card .profile-section {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* ================== 內部元件 ================== */
+.avatar {
+    font-size: 4rem;
+    width: 100px;
+    height: 100px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+}
+.layout-classic .avatar, .layout-modern .avatar { margin: 0 0 1.5rem 0; }
+
+.info-badges .badge {
+    background: rgba(150, 150, 150, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+.bio { line-height: 1.6; margin: 1.5rem 0; color: inherit; opacity: 0.8; }
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* 專案網格 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.project-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-5px); }
+.project-card h4 { margin: 0 0 0.5rem 0; }
+.project-card p { margin: 0; font-size: 0.9rem; opacity: 0.8; }
